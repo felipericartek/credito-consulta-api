@@ -9,12 +9,12 @@ import org.springframework.stereotype.Service;
 public class KafkaMensageriaService implements MensageriaService {
 
     private final KafkaTemplate<String, String> kafkaTemplate;
+    private final String topic;
 
-    @Value("${kafka.topic.consultas}")
-    private String topic;
-
-    public KafkaMensageriaService(KafkaTemplate<String, String> kafkaTemplate) {
+    public KafkaMensageriaService(KafkaTemplate<String, String> kafkaTemplate,
+                                  @Value("${kafka.topic.consultas}") String topic) {
         this.kafkaTemplate = kafkaTemplate;
+        this.topic = topic;
     }
 
     @Override
@@ -22,3 +22,4 @@ public class KafkaMensageriaService implements MensageriaService {
         kafkaTemplate.send(topic, mensagem);
     }
 }
+
