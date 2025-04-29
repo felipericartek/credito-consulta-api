@@ -1,0 +1,81 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+.mvn/timing.properties
+.settings/
+
+# Logs
+*.log
+logs/
+**/logs/
+
+# OS (Mac/Linux)
+.DS_Store
+ehthumbs.db
+Thumbs.db
+*.swp
+*~
+
+# IDE junk
+.vscode/
+*.class
+
+# Build
+*.jar
+*.war
+*.ear
+
+# Docker
+*.local
+docker-compose.override.yml
+.env
+.env.local
+.env.*.local
+**/.docker/
+
+# Temp/Test
+tmp/
+*.tmp
+*.bak
+*.old
+build/
+coverage/
+jacoco.exec
+*.db
+
+# Sonar
+.sonar/
+sonar-report.json
+
+# Spring specific
+spring.log
+
+# Test output
+test-output/
+surefire-reports/
+failures/
+
+# OS-generated files
+*.pid
+
+# Node (se tiver frontend junto)
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# JetBrains Rider
+.idea/
+.idea_modules/
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf/
